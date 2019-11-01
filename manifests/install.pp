@@ -2,7 +2,7 @@
 #   This is a module to inistall Apache
 #
 class apache::install {
-  package { 'httpd':
-    ensure => present,
+  package { "${apache::install_name}":
+    ensure => $apache::install_ensure,
   }
 }
